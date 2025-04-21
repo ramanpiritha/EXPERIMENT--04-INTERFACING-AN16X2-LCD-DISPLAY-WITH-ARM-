@@ -177,9 +177,11 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 MX_GPIO_Init();
 
   Lcd_PortType ports[] = {GPIOA,GPIOA,GPIOA,GPIOA};
-  	  Lcd_PinType pins[] = {GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
+  	  Lcd_PinType pins[] = {GPIO_PIN_3,GPIO_PIN_2,
+     GPIO_PIN_1,GPIO_PIN_0};
   	  Lcd_HandleTypeDef lcd;
-  	  lcd = Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
+  	  lcd = Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,
+     GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
   	  Lcd_cursor(&lcd, 0,0);
   	  Lcd_string(&lcd, "DEPT CSE(IOT)");
   	  Lcd_cursor(&lcd ,1,0);
